@@ -1,0 +1,27 @@
+
+<!-- {%extends 'login_inherit.html'%} -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form action="" method="post">
+        {%csrf_token%}
+        <table class="table">
+            {{form.as_table}}
+        </table>
+        <div class="text-center">
+            <button class="btn-btn-success">submit</button>
+            <a href="{% url 'regg'%}"  type="button" >not a user?</a>
+
+
+        </div>
+
+    </form>    
+
+</body>
+</html>

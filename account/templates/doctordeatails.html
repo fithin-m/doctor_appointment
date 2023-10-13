@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+
+
+{%block base%}
+    <h1>doctor deatails</h1>
+<div class="row jumbotron p-3">
+    {% for i in data %}
+    <div class="card" style="width: 18rem;">    
+        <img class="card-img-top" height="200px" src=" {{i.image.url }}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{i.doctorname}}</h5>
+          <p class="card-text">{{i.description}}</p>
+          <p class="card-text">RS.{{i.fees}}</p>
+         </div>
+        <!-- <ul class="list-group list-group-flush">
+          <li class="list-group-item">Cras justo odio</li>
+          <li class="list-group-item">Dapibus ac facilisis in</li>
+          <li class="list-group-item">Vestibulum at eros</li>
+        </ul>  -->
+        <div class="card-body" >
+          <a href="{%url 'apppo'%}" type="button"   class="btn btn-primary btn-sm" >make Appointment</a>
+          <a href="{%url 'home'%}" type="button" class="btn btn-danger btn-sm">back to menu</a>
+        </div>
+        
+      </div>
+      {% endfor%}
+</div>
+{%endblock base%}  
+    
+    
